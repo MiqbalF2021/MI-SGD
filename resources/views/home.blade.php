@@ -5,11 +5,11 @@
 <section class="hero text-center pt-20 pb-10">
     <!-- Hero Section Baris 1 (Judul dan Deskripsi) -->
     <div class=" container mx-auto flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0">
-        <div class="w-1/2 ml-10 text-center md:text-left">
-            <h1 class="text-5xl font-bold text-secondary"><span class="text-emerald-700">Selamat datang</span> di Madrasah Ibtidaiyah Sunan Gunung Djati</h1>
+        <div class="md:w-1/2 mx-5 md:mx-4 md:ml-10 text-center md:text-left">
+            <h1 class="md:text-5xl text-3xl font-bold text-secondary"><span class="text-emerald-700">Selamat datang</span> di Madrasah Ibtidaiyah Sunan Gunung Djati</h1>
             <p class="mt-4 text-gray-800">"Mewujudkan Generasi Cerdas Berakhlak Karimah"</p>
         </div>
-        <div class="mt-6 md:mt-0">
+        <div class="mx-auto item-center md:item-left mt-6 md:mt-0 hidden md:block">
             <img src="/img/hero-home.png" alt="Ilustrasi Pendidikan" class="h-auto w-full ">
         </div>
     </div>
@@ -17,12 +17,12 @@
     <!-- Hero Section Baris 2 (Prakata Kepala Sekolah) -->
     <div class="container mx-auto flex flex-col md:flex-row items-center justify-between py-12 px-6 md:px-12 rounded-lg mt-1">
         <!-- Foto Kepala Sekolah -->
-        <div class="w-full md:w-1/3 mb-6 md:mb-0 text-center md:text-left">
-            <img src="/img/ks.png" alt="Foto Kepala Sekolah" class="px-10 border-white">
+        <div class="w-full md:mb-0 text-center md:text-left md:mr-7">
+            <img src="/img/ks.png" alt="Foto Kepala Sekolah" class="pl-10">
         </div>
         
         <!-- Prakata Kepala Sekolah -->
-        <div class="w-full md:w-2/3 text-center md:text-left">
+        <div class="w-full text-center md:text-left">
             <p class="text-xl font-semibold text-gray-900">Prakata Kepala Sekolah</p>
             <p class="mt-4 text-gray-700">"Selamat datang di MI SGD. Kami berkomitmen untuk menciptakan lingkungan yang mendukung perkembangan akademik dan karakter siswa. Di sini, kami mengedepankan nilai-nilai moral dan pendidikan yang berkualitas. Mari bersama-sama kita bangun masa depan yang cerah untuk generasi yang akan datang."</p>
             <p class="mt-6 font-semibold text-gray-900">- Kepala Sekolah</p>
@@ -39,31 +39,32 @@
     <!-- Wave Border Section -->
 
 
-    <h2 class="text-3xl font-bold text-center text-orange-500 mb-8">Moto</h2>
+    <h2 class="text-3xl font-bold text-center text-orange-500">Moto</h2>
 
     <div class=" mb-12 mx-4 sm:mx-8 lg:mx-12">
         <p class="text-green-900 text-center text-xl font-medium">Cerdas Berakhlak Karimah</p>
+        <p></p>
     </div>
 
     <!-- 3 Cards: Cerdas, Sholeh, Terampil -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 mx-14">
         <!-- Card Cerdas -->
         <div class="bg-green-100 p-6 rounded-lg shadow-lg text-center">
-            <img src="/img/cerdas.png" alt="Cerdas" class="mx-auto w-32 h-32 mb-4 rounded-full border-4 border-green-200">
+            <img src="/img/cup.png" alt="Cerdas" class="mx-auto mb-4 w-1/3">
             <h3 class="text-2xl font-semibold text-orange-500 mb-2">Cerdas</h3>
             <p class="text-gray-700">Mengutamakan kecerdasan dalam belajar dan berpikir kritis untuk kemajuan masa depan.</p>
         </div>
 
         <!-- Card Sholeh -->
         <div class="bg-green-100 p-6 rounded-lg shadow-lg text-center">
-            <img src="/img/sholeh.png" alt="Sholeh" class="mx-auto w-32 h-32 mb-4 rounded-full border-4 border-green-200">
+            <img src="/img/mortarboard.png" alt="Sholeh" class="mx-auto mb-4 w-1/3">
             <h3 class="text-2xl font-semibold text-orange-500 mb-2">Sholeh</h3>
             <p class="text-gray-700">Berakhlak mulia dengan nilai-nilai keagamaan yang mendalam dalam kehidupan sehari-hari.</p>
         </div>
 
         <!-- Card Terampil -->
         <div class="bg-green-100 p-6 rounded-lg shadow-lg text-center">
-            <img src="/img/terampil.png" alt="Terampil" class="mx-auto w-32 h-32 mb-4 rounded-full border-4 border-green-200">
+            <img src="/img/startup.png" alt="Terampil" class="mx-auto mb-4 w-1/3">
             <h3 class="text-2xl font-semibold text-orange-500 mb-2">Terampil</h3>
             <p class="text-gray-700">Mengasah keterampilan praktis untuk menjadi individu yang siap menghadapi tantangan dunia.</p>
         </div>
@@ -72,20 +73,9 @@
 
     
 
-    <!-- Berita Section -->
-    <section id="berita" class="container mx-auto py-16">
-        <h2 class="text-3xl font-bold text-center mb-4">Berita Terbaru</h2>
-        <div class="space-y-4">
-            <div class="bg-white p-6 rounded shadow-md">
-                <h3 class="text-xl font-semibold">Berita 1</h3>
-                <p class="text-gray-700">Deskripsi singkat berita 1 yang baru saja diterbitkan. Selengkapnya...</p>
-            </div>
-            <div class="bg-white p-6 rounded shadow-md">
-                <h3 class="text-xl font-semibold">Berita 2</h3>
-                <p class="text-gray-700">Deskripsi singkat berita 2 yang baru saja diterbitkan. Selengkapnya...</p>
-            </div>
-        </div>
-    </section>
+   <!-- Berita Section -->
+   @include('berita')
+
 
     <!-- Sarana dan Prasarana Section -->
     <section id="sarana-prasarana" class="container mx-auto py-16">
