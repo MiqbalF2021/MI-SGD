@@ -35,105 +35,60 @@
 </section>
 
 
-<section id="moto" class="container mx-auto ">
-    <!-- Wave Border Section -->
-    <div class="w-full h-20 hidden md:block">
-        <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-                d="M0 43.9999C106.667 43.9999 213.333 7.99994 320 7.99994C426.667 7.99994 533.333 43.9999 640 43.9999C746.667 43.9999 853.333 7.99994 960 7.99994C1066.67 7.99994 1173.33 43.9999 1280 43.9999C1386.67 43.9999 1440 19.0266 1440 9.01329V100H0V43.9999Z"
-                class="fill-current text-emerald-500"></path>
-        </svg>
-    </div>
-
-    <div class="pb-20 pt-10 bg-emerald-500 relative">
-    <h2 class="text-3xl font-bold text-center text-orange-500">Moto</h2>
-
-    <div class=" mb-12 mx-4 sm:mx-8 lg:mx-12">
-        <p class="text-green-900 text-center text-xl font-medium">Cerdas Berakhlak Karimah</p>
-        <p></p>
-    </div>
-
     <!-- 3 Cards: Cerdas, Sholeh, Terampil -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-20 mx-14">
-        <!-- Card Cerdas -->
-        <div class="bg-green-100 p-6 rounded-lg shadow-lg text-center">
-            <img src="/img/cup.png" alt="Cerdas" class="mx-auto mb-4 w-1/3">
-            <h3 class="text-2xl font-semibold text-orange-500 mb-2">Cerdas</h3>
-            <p class="text-gray-700">Mengutamakan kecerdasan dalam belajar dan berpikir kritis untuk kemajuan masa depan.</p>
-        </div>
-
-        <!-- Card Sholeh -->
-        <div class="bg-green-100 p-6 rounded-lg shadow-lg text-center">
-            <img src="/img/mortarboard.png" alt="Sholeh" class="mx-auto mb-4 w-1/3">
-            <h3 class="text-2xl font-semibold text-orange-500 mb-2">Sholeh</h3>
-            <p class="text-gray-700">Berakhlak mulia dengan nilai-nilai keagamaan yang mendalam dalam kehidupan sehari-hari.</p>
-        </div>
-
-        <!-- Card Terampil -->
-        <div class="bg-green-100 p-6 rounded-lg shadow-lg text-center">
-            <img src="/img/startup.png" alt="Terampil" class="mx-auto mb-4 w-1/3">
-            <h3 class="text-2xl font-semibold text-orange-500 mb-2">Terampil</h3>
-            <p class="text-gray-700">Mengasah keterampilan praktis untuk menjadi individu yang siap menghadapi tantangan dunia.</p>
-        </div>
-    </div>
-</div>
-</section>
-
-    
+    @include('moto');
 
    <!-- Berita Section -->
-   @include('berita')
-
+   @include('berita');
 
     <!-- Sarana dan Prasarana Section -->
-    <section id="sarana-prasarana" class="container mx-auto py-16">
-        <h2 class="text-3xl font-bold text-center mb-4">Sarana dan Prasarana</h2>
-        <div class="bg-white p-8 rounded shadow-md">
-            <p class="text-gray-700">Sekolah kami memiliki fasilitas yang lengkap dan mendukung proses pembelajaran yang berkualitas.</p>
-        </div>
-    </section>
+    @include('sarana');
+    
 
-    <!-- Galeri dan Video Section -->
-    <section id="galeri" class="container mx-auto py-16">
-        <h2 class="text-3xl font-bold text-center mb-4">Galeri & Video</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <div class="bg-white p-4 rounded shadow-md">
-                <img src="https://via.placeholder.com/300" alt="Galeri" class="w-full h-48 object-cover rounded mb-4">
-                <p class="text-gray-700">Foto kegiatan di sekolah.</p>
-            </div>
-            <div class="bg-white p-4 rounded shadow-md">
-                <img src="https://via.placeholder.com/300" alt="Galeri" class="w-full h-48 object-cover rounded mb-4">
-                <p class="text-gray-700">Kegiatan ekstra kurikuler.</p>
-            </div>
+<!-- Galeri dan Video Section -->
+<section id="galeri" class="container mx-auto py-16">
+    <h2 class="text-3xl font-bold text-center mb-8 text-orange-500">Galeri & Video</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <img src="img/berita/berita1.jpg" alt="Galeri" class="w-full h-48 object-cover rounded-lg mb-6">
+            <p class="text-gray-700 font-medium text-center">Foto kegiatan di sekolah.</p>
         </div>
-    </section>
+        <div class="bg-white p-6 rounded-lg shadow-lg">
+            <img src="img/berita/berita2.jpeg" alt="Galeri" class="w-full h-48 object-cover rounded-lg mb-6">
+            <p class="text-gray-700 font-medium text-center">Kegiatan ekstra kurikuler.</p>
+        </div>
+    </div>
+</section>
+
 
     <!-- Apa Kata Mereka Section -->
-    <section id="testimonials" class="bg-gray-100 py-16">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-6">Apa Kata Mereka</h2>
-            <div class="space-y-4">
-                <div class="bg-white p-6 rounded shadow-md">
-                    <p class="text-gray-700">"MI SGD Bandung memberikan pengalaman belajar yang luar biasa. Guru-gurunya sangat peduli dan penuh perhatian." - Siswa 1</p>
-                </div>
-                <div class="bg-white p-6 rounded shadow-md">
-                    <p class="text-gray-700">"Sekolah ini sangat mendukung perkembangan akademik dan non-akademik anak saya." - Orang Tua 1</p>
-                </div>
-            </div>
+<!-- Apa Kata Mereka Section -->
+<section id="apa-kata-mereka" class="container mx-auto py-16 bg-gray-50">
+    <h2 class="text-3xl font-bold text-center mb-8 text-emerald-500">Apa Kata Mereka</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Testimonial Card 1 -->
+        <div class="bg-white p-6 rounded-lg border-t-4 border-emerald-500 shadow-lg text-center">
+            <img src="https://via.placeholder.com/100" alt="User 1" class="w-24 h-24 rounded-full mx-auto mb-4">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">John Doe</h3>
+            <p class="text-gray-600 italic">"Madrasah Ibtidaiyah ini sangat luar biasa! Anak saya sangat senang belajar di sini."</p>
         </div>
-    </section>
 
-    <!-- Kontak Section -->
-    <section id="kontak" class="container mx-auto py-16">
-        <h2 class="text-3xl font-bold text-center mb-4">Kontak Kami</h2>
-        <div class="bg-white p-8 rounded shadow-md">
-            <p class="text-gray-700 mb-4">Jika Anda memiliki pertanyaan, silakan hubungi kami melalui form di bawah ini atau langsung ke alamat berikut:</p>
-            <address class="text-gray-700">
-                <strong>MI SGD Bandung</strong><br>
-                Jalan Pendidikan No. 123, Bandung<br>
-                Telp: (022) 12345678<br>
-                Email: info@misgd.sch.id
-            </address>
+        <!-- Testimonial Card 2 -->
+        <div class="bg-white p-6 rounded-lg border-t-4 border-emerald-500 shadow-lg text-center">
+            <img src="https://via.placeholder.com/100" alt="User 2" class="w-24 h-24 rounded-full mx-auto mb-4">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Jane Smith</h3>
+            <p class="text-gray-600 italic">"Fasilitas yang disediakan sangat memadai dan mendukung proses belajar mengajar."</p>
         </div>
-    </section>
+
+        <!-- Testimonial Card 3 -->
+        <div class="bg-white p-6 rounded-lg border-t-4 border-emerald-500 shadow-lg text-center">
+            <img src="https://via.placeholder.com/100" alt="User 3" class="w-24 h-24 rounded-full mx-auto mb-4">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Ali Ahmad</h3>
+            <p class="text-gray-600 italic">"Lingkungan sekolah yang nyaman dan guru-guru yang profesional membuat saya merasa tenang."</p>
+        </div>
+    </div>
+</section>
+
+
+
 @endsection

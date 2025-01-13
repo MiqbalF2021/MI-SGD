@@ -11,6 +11,7 @@
     <main>
         @yield('content')
     </main>
+    @include('kontak')
     @include('partials.footer')
 </body>
 </html>
