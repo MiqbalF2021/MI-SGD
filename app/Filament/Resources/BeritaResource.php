@@ -13,6 +13,7 @@ use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\RichEditor;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\BeritaResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
@@ -34,7 +35,24 @@ class BeritaResource extends Resource
                 ->disk('public')
                 ->directory('beritas'),
                 TextInput::make('title'),
-                Textarea::make('description')
+                TextInput::make('penulis'),
+                RichEditor::make('description')
+                ->toolbarButtons([
+                    'attachFiles',
+                    'blockquote',
+                    'bold',
+                    'bulletList',
+                    'codeBlock',
+                    'h2',
+                    'h3',
+                    'italic',
+                    'link',
+                    'orderedList',
+                    'redo',
+                    'strike',
+                    'underline',
+                    'undo',
+                ])
             ]);
     }
 
@@ -43,6 +61,7 @@ class BeritaResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('title'),
+                TextColumn::make('penulis'),
                 ImageColumn::make('image'),
             ])
             ->filters([

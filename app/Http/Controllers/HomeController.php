@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Berita;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -32,7 +33,7 @@ class HomeController extends Controller
 public function struktur()
 {
     $data = [
-        'title' => 'Struktur Organisasi',
+        'title' => 'Struktur',
         'description' => 'Struktur organisasi MI SGD Bandung.',
     ];
     return view('struktur', $data);
@@ -60,6 +61,15 @@ public function extra()
         ],
     ];
     return view('ekstra', $data);
+}
+
+public function berita()
+{
+    $data = [
+        'title' => 'Berita dan Pengumuman',
+        'beritas' => Berita::all()
+    ];
+    return view('beritas', $data);
 }
 }
 

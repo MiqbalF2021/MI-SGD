@@ -4,21 +4,21 @@
         <div class="w-full lg:w-1/3 bg-gray-100 rounded-tr-3xl rounded-br-3xl border-r-4 border-emerald-500 px-10 py-10">
             <div class="flex items-center gap-4 mb-7">
                 <img src="/img/kontak/location.png" alt="lokasi.img" class="w-8 h-8">
-                <div>
+                <div class="font-normal">
                     <h1 class="text-xl font-bold text-emerald-950">Lokasi</h1>
                     <p class="text-sm text-gray-800">Kampus 2 UIN Sunan Gunung Djati Bandung, Jl. Cimencrang, Kec. Gedebage, Kota Bandung Jawa Barat 40292</p>
                 </div>
             </div>
             <div class="flex items-center gap-4 mb-7">
                 <img src="/img/kontak/mail.png" alt="mail.png" class="w-8 h-8">
-                <div>
+                <div class="font-normal">
                     <h1 class="text-xl font-bold text-emerald-950">Email</h1>
                     <p class="text-sm text-gray-800">misgd@uinsgd.ac.id</p>
                 </div>
             </div>
             <div class="flex items-center gap-4 mb-7">
                 <img src="/img/kontak/whatsapp.png" alt="mail.png" class="w-8 h-8">
-                <div>
+                <div class="font-normal">
                     <h1 class="text-xl font-bold text-emerald-950">Whatsapp</h1>
                     <p class="text-sm text-gray-800">081255332022</p>
                 </div>
@@ -31,19 +31,19 @@
 
         <div class="w-full lg:w-2/3 px-10 py-10">
             <form action="">
-                <div class="mb-4">
+                <div class="mb-4 font-normal">
                     <label for="nama-lengkap" class="block text-sm font-medium text-gray-700">Nama Lengkap</label>
-                    <input type="text" id="nama-lengkap" name="nama-lengkap" class="mt-1 block w-full p-2 border border-emerald-300 rounded-2xl shadow-sm focus:ring-emerald-500 focus:border-emerald-500" placeholder="Nama Lengkap">
+                    <input type="text" id="nama-lengkap" name="nama-lengkap" class="mt-1 block w-full p-2 border border-gray-300 rounded-2xl shadow-sm focus:ring-emerald-500 focus:border-emerald-500" placeholder="Nama Lengkap">
                 </div>
                 
-                <div class="mb-4">
+                <div class="mb-4 font-normal">
                     <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                    <input type="email" id="email" name="email" class="mt-1 block w-full p-2 border border-emerald-300 rounded-2xl shadow-sm focus:ring-emerald-500 focus:border-emerald-500" placeholder="Email">
+                    <input type="email" id="email" name="email" class="mt-1 block w-full p-2 border border-gray-300 rounded-2xl shadow-sm focus:ring-emerald-500 focus:border-emerald-500" placeholder="Email">
                 </div>
                 
-                <div class="mb-4">
+                <div class="mb-4 font-normal">
                     <label for="pesan" class="block text-sm font-medium text-gray-700">Pesan</label>
-                    <textarea id="pesan" name="pesan" rows="4" class="mt-1 block w-full p-2 border border-emerald-300 rounded-2xl shadow-sm focus:ring-emerald-500 focus:border-emerald-500" placeholder="Tulis pesan Anda di sini..."></textarea>
+                    <textarea id="pesan" name="pesan" rows="4" class="mt-1 block w-full p-2 border border-gray-300 rounded-2xl shadow-sm focus:ring-emerald-500 focus:border-emerald-500" placeholder="Tulis pesan Anda di sini..."></textarea>
                 </div>
                 
                 <div>

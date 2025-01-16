@@ -11,7 +11,13 @@ export default {
         './app/Filament/**/*.php',
         './resources/views/filament/**/*.blade.php',
         './vendor/filament/**/*.blade.php',
+        
     ],
+    safelist: [
+        '!duration-[0ms]',
+        '!delay-[0ms]',
+        'html.js :where([class*="taos:"]:not(.taos-init))'
+      ],
     
     theme: {
         extend: {
@@ -25,5 +31,7 @@ export default {
             },
         },
     },
-    plugins: [],
+    plugins: [
+        require('taos/plugin'),
+    ],
 };

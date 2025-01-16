@@ -2,7 +2,28 @@
 
 @section('content')
     <!-- Hero Section -->
-<section class="hero text-center pt-20 pb-10">
+    <button
+    type="button"
+    data-twe-ripple-init
+    data-twe-ripple-color="light"
+    class="!fixed bottom-5 end-5 hidden rounded-full bg-red-600 p-3 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg"
+    id="btn-back-to-top">
+    <span class="[&>svg]:w-4">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="3"
+        stroke="currentColor">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+      </svg>
+    </span>
+  </button>
+  
+<section class="hero text-center mt-20 mb-10">
     <!-- Hero Section Baris 1 (Judul dan Deskripsi) -->
     <div class=" container mx-auto flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0">
         <div class="md:w-1/2 mx-5 md:mx-4 md:ml-10 text-center md:text-left">
@@ -21,12 +42,15 @@
             <img src="/img/ks.png" alt="Foto Kepala Sekolah" class="pl-10">
         </div>
         
-        <!-- Prakata Kepala Sekolah -->
+        <!-- Prakata Kepala Sekolah --> 
+        @php
+            $pengumuman = \App\Models\Pengumuman::where('title', 'Prakata dari Kepala Sekolah')->first();
+        @endphp
         <div class="w-full text-center md:text-left">
-            <p class="text-xl font-semibold text-gray-900">Prakata Kepala Sekolah</p>
-            <p class="mt-4 text-gray-700">"Selamat datang di MI SGD. Kami berkomitmen untuk menciptakan lingkungan yang mendukung perkembangan akademik dan karakter siswa. Di sini, kami mengedepankan nilai-nilai moral dan pendidikan yang berkualitas. Mari bersama-sama kita bangun masa depan yang cerah untuk generasi yang akan datang."</p>
+            <p class="text-xl font-semibold text-gray-900">{{ $pengumuman->title }}</p>
+            <p class="mt-4 text-gray-700">{!! Str::limit(str($pengumuman->description)->sanitizeHtml(), 200) !!}  </p>
             <p class="mt-6 font-semibold text-gray-900">- Kepala Sekolah</p>
-            <a href="#selengkapnya" class="mt-6 inline-block text-white bg-emerald-500 hover:bg-emerald-600 px-6 py-3 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">
+            <a href="/pengumuman/3" class="mt-6 inline-block text-white bg-emerald-500 hover:bg-emerald-600 px-6 py-3 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">
                 Selengkapnya
             </a>
         </div>
@@ -46,46 +70,50 @@
     
 
 <!-- Galeri dan Video Section -->
+@php
+    $galeris = \App\Models\Galeri::all();
+    $medias = \App\Models\Media::all();
+@endphp
 <section id="galeri" class="container mx-auto py-16">
     <h2 class="text-3xl font-bold text-center mb-8 text-orange-500">Galeri & Video</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-            <img src="img/berita/berita1.jpg" alt="Galeri" class="w-full h-48 object-cover rounded-lg mb-6">
-            <p class="text-gray-700 font-medium text-center">Foto kegiatan di sekolah.</p>
+        @foreach ( $galeris as $galeri)
+        <div class="bg-white p-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:border-t-4 hover:border-orange-400">
+            <img src="{{ asset('storage/' . $galeri->image)  }}" alt="{{ $galeri->title }}" class="w-full h-48 object-cover rounded-lg mb-6">
+            <p class="text-gray-700 font-medium text-center">{{ $galeri->title }}</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-            <img src="img/berita/berita2.jpeg" alt="Galeri" class="w-full h-48 object-cover rounded-lg mb-6">
-            <p class="text-gray-700 font-medium text-center">Kegiatan ekstra kurikuler.</p>
+        @endforeach
+        
+        @foreach ( $medias as $media)
+        <div class="bg-white p-6 rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:scale-105 hover:border-t-4 hover:border-orange-400">
+            <iframe class="w-80 h-48 mx-auto mb-6 rounded-md" src="{{ $media->link }}" title="{{ $media->title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p class="text-gray-700 font-medium text-center">{{ $media->title }}</p>
         </div>
+        @endforeach
+
     </div>
 </section>
 
 
     <!-- Apa Kata Mereka Section -->
 <!-- Apa Kata Mereka Section -->
-<section id="apa-kata-mereka" class="container mx-auto py-16 bg-gray-50">
-    <h2 class="text-3xl font-bold text-center mb-8 text-emerald-500">Apa Kata Mereka</h2>
+@php
+    $komentars = \App\Models\Komentar::all();
+@endphp
+<section id="apa-kata-mereka" class="container mx-auto py-16 bg-gray-50 mt-16 mb-16">
+    <h2 class="text-3xl font-bold text-center mb-8 text-emerald-600">Apa Kata Mereka</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Testimonial Card 1 -->
+        @foreach ( $komentars as $komentar)
         <div class="bg-white p-6 rounded-lg border-t-4 border-emerald-500 shadow-lg text-center">
-            <img src="https://via.placeholder.com/100" alt="User 1" class="w-24 h-24 rounded-full mx-auto mb-4">
-            <h3 class="text-xl font-bold text-gray-800 mb-2">John Doe</h3>
-            <p class="text-gray-600 italic">"Madrasah Ibtidaiyah ini sangat luar biasa! Anak saya sangat senang belajar di sini."</p>
-        </div>
+            <img src="{{ asset('storage/' . $komentar->image)  }}" alt="{{ $komentar->nama }}" class="w-36 h-36 rounded-full mx-auto mb-4">
+            <h3 class="text-xl font-bold text-gray-800 mb-2">{{ $komentar->nama }}</h3>
+            <p class="text-xs text-gray-500 mb-2">{{ $komentar->jabatan }}</p>
+            <p class="text-gray-600 italic font-normal">"{{ $komentar->komentar }}"</p>
+        </div>  
+        @endforeach
+        
 
-        <!-- Testimonial Card 2 -->
-        <div class="bg-white p-6 rounded-lg border-t-4 border-emerald-500 shadow-lg text-center">
-            <img src="https://via.placeholder.com/100" alt="User 2" class="w-24 h-24 rounded-full mx-auto mb-4">
-            <h3 class="text-xl font-bold text-gray-800 mb-2">Jane Smith</h3>
-            <p class="text-gray-600 italic">"Fasilitas yang disediakan sangat memadai dan mendukung proses belajar mengajar."</p>
-        </div>
-
-        <!-- Testimonial Card 3 -->
-        <div class="bg-white p-6 rounded-lg border-t-4 border-emerald-500 shadow-lg text-center">
-            <img src="https://via.placeholder.com/100" alt="User 3" class="w-24 h-24 rounded-full mx-auto mb-4">
-            <h3 class="text-xl font-bold text-gray-800 mb-2">Ali Ahmad</h3>
-            <p class="text-gray-600 italic">"Lingkungan sekolah yang nyaman dan guru-guru yang profesional membuat saya merasa tenang."</p>
-        </div>
     </div>
 </section>
 

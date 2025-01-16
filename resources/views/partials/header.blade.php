@@ -1,5 +1,5 @@
-<header class=" text-emerald-950 mx-3 mt-1 rounded-lg">
-    <nav class="container mx-auto p-4 flex justify-between items-center">
+<header class=" text-emerald-950 rounded-lg ">
+    <nav class="container p-4 mx-10 flex justify-between items-center">
         <div class="w-8">
             <img src="/img/logo.png" alt="Logo">
         </div>
@@ -22,7 +22,7 @@
                 </ul>
             </li>
             <li><a href="/#kontak" class="hover:underline hover:text-emerald-700">Hubungi Kami</a></li>
-            <li><a href="#daftar" class="hover:bg-orange-600 hover:text-orange-200 text-white bg-orange-500 px-5 py-3 rounded-xl">Daftar Sekarang</a></li>
+            <li><a href="https://docs.google.com/forms/d/e/1FAIpQLScB_-Hc-KPFhxfMoN3pS2tMcLYumVv5EAF1KigVui81brt6aw/viewform" class="hover:bg-orange-600 hover:text-orange-200 text-white bg-orange-500 px-5 py-3 rounded-xl">Daftar Sekarang</a></li>
         </ul>
     </nav>
 </header>
