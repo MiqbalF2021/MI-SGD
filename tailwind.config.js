@@ -11,6 +11,7 @@ export default {
         './app/Filament/**/*.php',
         './resources/views/filament/**/*.blade.php',
         './vendor/filament/**/*.blade.php',
+        "./node_modules/flowbite/**/*.js",
         
     ],
     safelist: [
@@ -33,5 +34,6 @@ export default {
     },
     plugins: [
         require('taos/plugin'),
+        require('flowbite/plugin'),
     ],
 };

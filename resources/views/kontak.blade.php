@@ -30,20 +30,21 @@
         </div>
 
         <div class="w-full lg:w-2/3 px-10 py-10">
-            <form action="">
+            <form action="{{ route('messages.store') }}" method="POST">
+                @csrf
                 <div class="mb-4 font-normal">
                     <label for="nama-lengkap" class="block text-sm font-medium text-gray-700">Nama Lengkap</label>
-                    <input type="text" id="nama-lengkap" name="nama-lengkap" class="mt-1 block w-full p-2 border border-gray-300 rounded-2xl shadow-sm focus:ring-emerald-500 focus:border-emerald-500" placeholder="Nama Lengkap">
+                    <input type="text" id="nama-lengkap" name="nama_lengkap" class="mt-1 block w-full p-2 border border-gray-300 rounded-2xl shadow-sm focus:ring-emerald-500 focus:border-emerald-500" placeholder="Nama Lengkap" required>
                 </div>
                 
                 <div class="mb-4 font-normal">
                     <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
-                    <input type="email" id="email" name="email" class="mt-1 block w-full p-2 border border-gray-300 rounded-2xl shadow-sm focus:ring-emerald-500 focus:border-emerald-500" placeholder="Email">
+                    <input type="email" id="email" name="email" class="mt-1 block w-full p-2 border border-gray-300 rounded-2xl shadow-sm focus:ring-emerald-500 focus:border-emerald-500" placeholder="Email" required>
                 </div>
                 
                 <div class="mb-4 font-normal">
                     <label for="pesan" class="block text-sm font-medium text-gray-700">Pesan</label>
-                    <textarea id="pesan" name="pesan" rows="4" class="mt-1 block w-full p-2 border border-gray-300 rounded-2xl shadow-sm focus:ring-emerald-500 focus:border-emerald-500" placeholder="Tulis pesan Anda di sini..."></textarea>
+                    <textarea id="pesan" name="pesan" rows="4" class="mt-1 block w-full p-2 border border-gray-300 rounded-2xl shadow-sm focus:ring-emerald-500 focus:border-emerald-500" placeholder="Tulis pesan Anda di sini..." required></textarea>
                 </div>
                 
                 <div>
@@ -52,6 +53,7 @@
                     </button>
                 </div>
             </form>
+            
         </div>
     </div>
 </section>

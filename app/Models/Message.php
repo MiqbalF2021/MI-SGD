@@ -4,12 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Pengumuman extends Model
+class Message extends Model
 {
-    
     protected $fillable = [
-        'image',
-        'title',
-        'description',
+        'nama_lengkap',
+        'email',
+        'pesan',
     ];
 }

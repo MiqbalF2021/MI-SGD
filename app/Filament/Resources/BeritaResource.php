@@ -92,4 +92,7 @@ class BeritaResource extends Resource
             'edit' => Pages\EditBerita::route('/{record}/edit'),
         ];
     }
+
+    protected static ?string $navigationGroup = 'Berita dan Pengumuman';
+    protected static ?string $navigationLabel = 'Berita';
 }

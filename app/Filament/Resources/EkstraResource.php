@@ -89,4 +89,6 @@ class EkstraResource extends Resource
             'edit' => Pages\EditEkstra::route('/{record}/edit'),
         ];
     }
+    protected static ?string $navigationGroup = 'Profile';
+    protected static ?string $navigationLabel = 'Ekstrakurikuler';
 }

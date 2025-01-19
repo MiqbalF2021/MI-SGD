@@ -2,26 +2,6 @@
 
 @section('content')
     <!-- Hero Section -->
-    <button
-    type="button"
-    data-twe-ripple-init
-    data-twe-ripple-color="light"
-    class="!fixed bottom-5 end-5 hidden rounded-full bg-red-600 p-3 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg"
-    id="btn-back-to-top">
-    <span class="[&>svg]:w-4">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="3"
-        stroke="currentColor">
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
-      </svg>
-    </span>
-  </button>
   
 <section class="hero text-center mt-20 mb-10">
     <!-- Hero Section Baris 1 (Judul dan Deskripsi) -->
@@ -49,7 +29,7 @@
         <div class="w-full text-center md:text-left">
             <p class="text-xl font-semibold text-gray-900">{{ $pengumuman->title }}</p>
             <p class="mt-4 text-gray-700">{!! Str::limit(str($pengumuman->description)->sanitizeHtml(), 200) !!}  </p>
-            <p class="mt-6 font-semibold text-gray-900">- Kepala Sekolah</p>
+            
             <a href="/pengumuman/3" class="mt-6 inline-block text-white bg-emerald-500 hover:bg-emerald-600 px-6 py-3 rounded-lg transition duration-300 ease-in-out transform hover:scale-105">
                 Selengkapnya
             </a>
@@ -57,7 +37,6 @@
     </div>
     
 </section>
-
 
     <!-- 3 Cards: Cerdas, Sholeh, Terampil -->
     @include('moto');
@@ -105,7 +84,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Testimonial Card 1 -->
         @foreach ( $komentars as $komentar)
-        <div class="bg-white p-6 rounded-lg border-t-4 border-emerald-500 shadow-lg text-center">
+        <div class="bg-white p-6 rounded-lg border-t-4 border-emerald-500 shadow-lg text-center transition duration-300 ease-in-out transform hover:scale-105 hover:border-t-4 hover:border-orange-400">
             <img src="{{ asset('storage/' . $komentar->image)  }}" alt="{{ $komentar->nama }}" class="w-36 h-36 rounded-full mx-auto mb-4">
             <h3 class="text-xl font-bold text-gray-800 mb-2">{{ $komentar->nama }}</h3>
             <p class="text-xs text-gray-500 mb-2">{{ $komentar->jabatan }}</p>

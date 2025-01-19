@@ -90,4 +90,7 @@ class StrukturResource extends Resource
             'edit' => Pages\EditStruktur::route('/{record}/edit'),
         ];
     }
+    protected static ?string $navigationGroup = 'Profile';
+
+    protected static ?string $navigationLabel = 'Struktur';
 }

@@ -24,6 +24,8 @@
         "@tiptap/extension-table-cell": "^2.11.2",
         "@tiptap/extension-table-row": "^2.11.2",
         "@tiptap/starter-kit": "^2.11.2",
+        "flowbite": "^2.5.2",
+        "pagedone": "^1.2.2",
         "taos": "^1.0.5"
     }
 }

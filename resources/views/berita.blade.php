@@ -1,5 +1,3 @@
-
-
 @php
     $beritas = \App\Models\Berita::take(5)->get();
 @endphp
@@ -19,7 +17,7 @@
                 <a href="{{ url('/berita/' . $berita->id) }}">
                     <div class="border-orange-400  bg-white hover:bg-gray-50 rounded-b rounded-r-3xl shadow-md border-r-2 p-4 flex flex-col justify-between leading-normal">
                       <div class="mb-8 flex gap-5">
-                        <img src="{{ asset('storage/' . $berita->image) }}" alt="{{ $berita->title }}" class="h-32 w-auto">
+                        <img src="{{ asset('storage/' . $berita->image) }}" alt="{{ $berita->title }}" class="w-1/4 h-1/4 lg:h-1/4 md:w-1/4">
                         <div>
                             <div class="text-gray-900 font-bold text-xl mb-2">{{ $berita->title }}</div>
                         <p class="text-gray-700 text-base font-normal">{!! Str::limit( str($berita->description)->sanitizeHtml(), 100) !!}</p>
@@ -54,7 +52,7 @@
                 <a href="{{ url('/pengumuman/' . $pengumuman->id) }}">
                     <li class=" p-5 rounded-lg hover:shadow-md mt-5">
                         <div class="flex items-center space-x-4 ">
-                            <img src="{{ asset('storage/' . $pengumuman->image) }}" alt="{{ $pengumuman->title }}" class="w-auto h-32 md:w-20 md:h-20 rounded-md">
+                            <img src="{{ asset('storage/' . $pengumuman->image) }}" alt="{{ $pengumuman->title }}" class="w-1/4 h-1/4 md:w-1/4 md:h-1/4 rounded-md">
                         <div>
                             <h4 class="text-md md:text-lg font-semibold text-orange-500">{{ $pengumuman->title }}</h4>
                             <p class="text-gray-700 text-xs md:text-base font-normal">{!! Str::limit(str($pengumuman->description)->sanitizeHtml(), 100) !!}</p>

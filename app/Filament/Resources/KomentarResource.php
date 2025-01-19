@@ -74,4 +74,6 @@ class KomentarResource extends Resource
             'edit' => Pages\EditKomentar::route('/{record}/edit'),
         ];
     }
+    protected static ?string $navigationLabel = 'Review atau Komentar';
+    protected static ?string $navigationGroup = 'Konten halaman depan';
 }

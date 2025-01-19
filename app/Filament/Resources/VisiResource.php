@@ -89,4 +89,7 @@ class VisiResource extends Resource
             'edit' => Pages\EditVisi::route('/{record}/edit'),
         ];
     }
+    protected static ?string $navigationGroup = 'Profile';
+
+    protected static ?string $navigationLabel = 'Visi dan Misi';
 }

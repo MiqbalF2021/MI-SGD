@@ -74,4 +74,6 @@ class MotoResource extends Resource
             'edit' => Pages\EditMoto::route('/{record}/edit'),
         ];
     }
+    protected static ?string $navigationGroup = 'Konten halaman depan';
+    protected static ?string $navigationLabel = 'Moto';
 }

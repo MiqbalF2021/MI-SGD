@@ -73,4 +73,6 @@ class SaranaResource extends Resource
             'edit' => Pages\EditSarana::route('/{record}/edit'),
         ];
     }
+    protected static ?string $navigationGroup = 'Konten halaman depan';
+    protected static ?string $navigationLabel = 'Sarana dan prasarana';
 }

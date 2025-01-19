@@ -71,4 +71,7 @@ class GaleriResource extends Resource
             'edit' => Pages\EditGaleri::route('/{record}/edit'),
         ];
     }
+
+    protected static ?string $navigationGroup = 'Galeri dan Video';
+    protected static ?string $navigationLabel = 'Galeri';
 }

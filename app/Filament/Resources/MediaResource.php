@@ -65,4 +65,8 @@ class MediaResource extends Resource
             'edit' => Pages\EditMedia::route('/{record}/edit'),
         ];
     }
+
+    
+    protected static ?string $navigationGroup = 'Galeri dan Video';
+    protected static ?string $navigationLabel = 'Video';
 }

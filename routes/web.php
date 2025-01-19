@@ -4,6 +4,7 @@ use App\Models\Berita;
 use App\Models\Pengumuman;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MessageController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/kurikulum', [HomeController::class, 'kurikulum'])->name('kurikulum');
@@ -27,6 +28,7 @@ Route::get('/pengumuman/{id}', function ($id) {
     return view('pengumuman.show', compact('pengumuman'));
 })->name('.pengumuman.show');
 
+Route::post('/messages', [MessageController::class, 'store'])->name('messages.store');
 // Route::get('/berita/{berita:id}', function(Berita $berita){
 
 //     // return view('beritas', ['berita' => $berita]);

@@ -94,4 +94,7 @@ class KurikulumResource extends Resource
             'edit' => Pages\EditKurikulum::route('/{record}/edit'),
         ];
     }
+    protected static ?string $navigationGroup = 'Profile';
+
+    protected static ?string $navigationLabel = 'Kurikulum';
 }

@@ -90,4 +90,6 @@ class PengumumanResource extends Resource
             'edit' => Pages\EditPengumuman::route('/{record}/edit'),
         ];
     }
+    protected static ?string $navigationGroup = 'Berita dan Pengumuman';
+    protected static ?string $navigationLabel = 'Pengumuman';
 }
