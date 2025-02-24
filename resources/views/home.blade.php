@@ -79,12 +79,13 @@
 @php
     $komentars = \App\Models\Komentar::all();
 @endphp
+
 <section id="apa-kata-mereka" class="container mx-auto py-16 bg-gray-50 mt-16 mb-16">
     <h2 class="text-3xl font-bold text-center mb-8 text-emerald-600">Apa Kata Mereka</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="flex flex-col md:flex-row justify-center items-center gap-8 ">
         <!-- Testimonial Card 1 -->
         @foreach ( $komentars as $komentar)
-        <div class="bg-white p-6 rounded-lg border-t-4 border-emerald-500 shadow-lg text-center transition duration-300 ease-in-out transform hover:scale-105 hover:border-t-4 hover:border-orange-400">
+        <div class="bg-white max-w-md p-6 rounded-lg border-t-4 border-emerald-500 shadow-lg text-center transition duration-300 ease-in-out transform hover:scale-105 hover:border-t-4 hover:border-orange-400">
             <img src="{{ asset('storage/' . $komentar->image)  }}" alt="{{ $komentar->nama }}" class="w-36 h-36 rounded-full mx-auto mb-4">
             <h3 class="text-xl font-bold text-gray-800 mb-2">{{ $komentar->nama }}</h3>
             <p class="text-xs text-gray-500 mb-2">{{ $komentar->jabatan }}</p>
@@ -95,6 +96,8 @@
 
     </div>
 </section>
+
+@include('kontak')
 
 
 

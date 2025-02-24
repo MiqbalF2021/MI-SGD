@@ -8,6 +8,7 @@ use App\Models\Galeri;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
+use Filament\Forms\Components\Select;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Filament\Tables\Columns\ImageColumn;
@@ -33,6 +34,12 @@ class GaleriResource extends Resource
             ->disk('public')
             ->directory('galeri'),
             TextInput::make('title'),
+            Select::make('kategori')
+            ->options([
+                'kurikulum' => 'Kurikulum',
+                'ekstrakurikuler' => 'Ekstrakurikuler',
+                'lainnya' => 'Lainnya',
+            ])
         ]);
     }
 
@@ -41,6 +48,7 @@ class GaleriResource extends Resource
         return $table
             ->columns([
                 TextColumn::make('title'),
+                TextColumn::make('kategori'),
                 ImageColumn::make('image'),
             ])
             ->filters([

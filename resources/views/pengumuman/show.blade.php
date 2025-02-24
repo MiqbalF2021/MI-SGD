@@ -12,11 +12,4 @@
         </div>
         
     </div>
-    <div class="mb-28">
-        <a href="/#berita">
-            <p class="font-medium text-right mr-20 text-orange-500 hover:text-orange-300">
-                << Kembali
-            </p>
-        </a>     
-    </div>
 @endsection

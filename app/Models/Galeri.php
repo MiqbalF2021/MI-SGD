@@ -9,5 +9,6 @@ class Galeri extends Model
     protected $fillable = [
         'image',
         'title',
+        'kategori',
     ];
 }

@@ -16,7 +16,7 @@
         @foreach ($saranas as $sarana)
     <div class="bg-emerald-500 px-6 rounded-3xl py-8 shadow-lg text-center  transition duration-300 ease-in-out transform hover:scale-105 hover:border-t-4 hover:border-orange-400">
         <img src="{{ asset('storage/' . $sarana->image)  }}" alt="{{ $sarana->title }}" class="mx-auto mb-6 w-80 h-60 rounded-lg ">
-        <h3 class="text-xl font-bold text-emerald-950 mb-4">{{ $sarana->title }}</h3> 
+        <h3 class="text-xl font-bold text-white mb-4">{{ $sarana->title }}</h3> 
         <p class="text-emerald-900 text-sm font-medium">{{ $sarana->description }}</p>
     </div>
         @endforeach

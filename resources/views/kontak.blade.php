@@ -24,13 +24,12 @@
                 </div>
             </div>
             <div class="overflow-hidden rounded-lg shadow-lg">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.59947256209!2d107.7027722737112!3d-6.9383788679174705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c31a204a1567%3A0x502663c2c531d608!2sMI%20Sunan%20Gunung%20Djati%20Bandung!5e0!3m2!1sid!2sid!4v1736737997395!5m2!1sid!2sid"
-                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.59947256209!2d107.7027722737112!3d-6.9383788679174705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c31a204a1567%3A0x502663c2c531d608!2sMI%20Sunan%20Gunung%20Djati%20Bandung!5e0!3m2!1sid!2sid!4v1736737997395!5m2!1sid!2sid" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
 
         <div class="w-full lg:w-2/3 px-10 py-10">
-            <form action="{{ route('messages.store') }}" method="POST">
+            <form id="contact-form" action="{{ route('messages.store') }}" method="POST">
                 @csrf
                 <div class="mb-4 font-normal">
                     <label for="nama-lengkap" class="block text-sm font-medium text-gray-700">Nama Lengkap</label>
@@ -53,7 +52,36 @@
                     </button>
                 </div>
             </form>
-            
         </div>
     </div>
 </section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('contact-form');
+
+        form.addEventListener('submit', (event) => {
+            const namaLengkap = document.getElementById('nama-lengkap').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const pesan = document.getElementById('pesan').value.trim();
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!namaLengkap) {
+                alert('Nama lengkap tidak boleh kosong.');
+                event.preventDefault();
+                return;
+            }
+
+            if (!email || !emailPattern.test(email)) {
+                alert('Masukkan email yang valid.');
+                event.preventDefault();
+                return;
+            }
+
+            if (!pesan) {
+                alert('Pesan tidak boleh kosong.');
+                event.preventDefault();
+            }
+        });
+    });
+</script>

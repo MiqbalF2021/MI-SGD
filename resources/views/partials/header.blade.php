@@ -1,7 +1,7 @@
 <header class="text-emerald-950 rounded-lg">
     <nav class="container p-4 mx-auto flex justify-between items-center">
         <!-- Logo -->
-        <div class="w-8">
+        <div class="w-14">
             <img src="/img/logo.png" alt="Logo">
         </div>
 
@@ -24,18 +24,18 @@
                 <li class="relative group">
                     <a href="#" class="hover:underline hover:text-emerald-700">Profil</a>
                     <!-- Dropdown Menu -->
-                    <ul class="font-medium absolute left-0 mt-2 bg-white text-emerald-700 rounded shadow opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <ul class="font-normal flex flex-col items-start absolute left-0 mt-2 bg-white text-emerald-950 rounded shadow opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                         <li>
-                            <a href="/kurikulum" class="block px-4 py-2 hover:bg-gray-200">Kurikulum</a>
+                            <a href="/kurikulum" class="block px-4 py-2 hover:text-emerald-600">Kurikulum</a>
                         </li>
                         <li>
-                            <a href="/struktur" class="block px-4 py-2 hover:bg-gray-200">Struktur</a>
+                            <a href="/struktur" class="block px-4 py-2 hover:text-emerald-600">Struktur</a>
                         </li>
                         <li>
-                            <a href="/visi" class="block px-4 py-2 hover:bg-gray-200">Visi Misi</a>
+                            <a href="/visi" class="block px-4 py-2 hover:text-emerald-600">Visi Misi</a>
                         </li>
                         <li>
-                            <a href="/ekstra" class="block px-4 py-2 hover:bg-gray-200">Extrakurikuler</a>
+                            <a href="/ekstra" class="block px-4 py-2 hover:text-emerald-600">Extrakurikuler</a>
                         </li>
                     </ul>
                 </li>
